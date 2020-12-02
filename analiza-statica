@@ -1,0 +1,38 @@
+     Project:
+          shop
+     Scope:
+          Project 'shop'
+     Profile:
+          Default
+     Results:
+          Enabled coding rules: 346
+FindBugs: 346
+          Problems found: 9
+FindBugs: 9
+
+     Time statistics:
+Started: Wed Dec 02 22:01:04 EET 2020
+Initialization: 00:00:01.559
+FindBugs: 00:00:05.596
+Gathering results: 00:00:00.117
+Finished: Wed Dec 02 22:01:12 EET 2020
+     Detailed Results:
+          shop
+Reliability
+Malicious code vulnerability - May expose internal representation by incorporating reference to mutable object
+Order
+EI2: com.minishop.shop.entity.Order.setOrderDate(Date) may expose internal representation by storing an externally mutable object into Order.orderDate - line: 56
+OrderInfo
+EI2: new com.minishop.shop.model.OrderInfo(String, Date, int, double, String, String, String, String) may expose internal representation by storing an externally mutable object into OrderInfo.orderDate - line: 28
+EI2: com.minishop.shop.model.OrderInfo.setOrderDate(Date) may expose internal representation by storing an externally mutable object into OrderInfo.orderDate - line: 32
+Product
+EI2: com.minishop.shop.entity.Product.setCreateDate(Date) may expose internal representation by storing an externally mutable object into Product.createDate - line: 69
+EI2: com.minishop.shop.entity.Product.setImage(byte[]) may expose internal representation by storing an externally mutable object into Product.image - line: 72
+Malicious code vulnerability - May expose internal representation by returning reference to mutable object
+Order
+EI: com.minishop.shop.entity.Order.getOrderDate() may expose internal representation by returning Order.orderDate - line: 52
+OrderInfo
+EI: com.minishop.shop.model.OrderInfo.getOrderDate() may expose internal representation by returning OrderInfo.orderDate - line: 47
+Product
+EI: com.minishop.shop.entity.Product.getCreateDate() may expose internal representation by returning Product.createDate - line: 65
+EI: com.minishop.shop.entity.Product.getImage() may expose internal representation by returning Product.image - line: 73
